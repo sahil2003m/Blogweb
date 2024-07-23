@@ -1,0 +1,40 @@
+<%- include("components/Header.ejs")%>
+<%- include("components/Navbar.ejs")%>
+
+    <div class="container my-5">
+      <div class="jumbotron text-center">
+        <h3 class="display-4">Welcome to Our Blog Web</h3>
+        <p class="lead">Your go-to source for insights, stories,and trends across various topics</p>
+        <a href="/categories" class="btn btn-primary" role="button">Explore Categories</a>
+      </div>
+
+      <h3 class="my-4 text-center">Featured Articles</h3>
+      
+      <div class="row">
+        <% featuredArticles.forEach((entry) => { %>
+        <div class="col-md-4 mb-3">
+          <div class="card">
+            <img src="<%= entry.img %>" alt="<%= entry.title %>" class="card-img-top" height="233px">
+            <div class="card-body">
+              <h5 class="card-title"><%= entry.title %></h5>
+              <p class="card-text"><%= entry.discription %></p>
+              <a href="#" class="btn btn-primary text-center">Read More</a>
+            </div>
+          </div>
+        </div>
+
+        <% }) %>
+      </div>
+       
+
+      <div class="text-center my-5">
+          <h2>Join Our Community</h2>
+          <p>
+            Subscribe to our newsletter for the latest updates and exclusive content!
+          </p>
+          <a href="#" class="btn btn-success">Subscribe Now</a>
+      </div>
+
+      </div>
+   
+<%- include("components/Footer.ejs")%>

@@ -3,6 +3,8 @@ const express = require("express");
 // const port = 3000;
 const app = express();
 const port = process.env.PORT;
+const {allCategories} = require("./public/Categories");
+const {featuredArticles} = require("./public/featuredArticles")
 
 app.set("view engine", "ejs");
 
@@ -11,10 +13,13 @@ app.use(express.static(__dirname + "/node_modules/bootstrap"));
 
 
 app.get("/", (req, res) => {
-    res.render(__dirname + "/views/index");
+    res.render(__dirname + "/views/home",{featuredArticles});
 });
 
 
+app.get("/categories",(req , res) => {
+    res.render(__dirname + "/views/categories",{allCategories});
+});
 
 app.get("/about",(req , res) => {
     res.render(__dirname + "/views/about");
