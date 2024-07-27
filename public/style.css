@@ -1,3 +1,18 @@
 .navbar-item-right{
-    margin-left: 72%;
+    margin-left: 43%;
+}
+
+.navbar-linktext{
+    text-decoration: none;
+    color: white;
+    font-size: small;
+}
+
+.spacing{
+    color: aliceblue;
+}
+
+.imglogo{
+    border: 1px ridge rgb(242, 240, 240);
+    border-radius: 50%;
 }

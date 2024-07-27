@@ -13,13 +13,13 @@
             <% allCategories.forEach((entry) => { %>
             <div class="col-md-4 mb-3">
               <div class="card text-center">
-                <img src="<%= entry.img %>" alt="<%= entry.title %>" height="233px">
+                <img src="<%= entry.img %>" alt="<%= entry.category %>" height="233px">
                 <div class="card-body">
-                  <h5 class="card-title"><%= entry.title %></h5>
+                  <h5 class="card-title"><%= entry.category %></h5>
                   <p class="card-text">
                    <%= entry.discription %>
                   </p>
-                  <a href="#" class="btn btn-primary">Explore</a>
+                  <a href="/category/<%= entry.slug %>" class="btn btn-primary">Explore</a>
                 </div>
               </div>
             </div>
